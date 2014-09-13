@@ -12,6 +12,7 @@ and open the template in the editor.
     <body>
         <?php
             echo("Teste Antonio Subversion");
+            echo("Teste de Retorno ao netBeans 8.0.1");
         ?>
     </body>
 </html>
