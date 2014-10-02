@@ -1,5 +1,5 @@
 <?php
-include '../Includes/conecta.php';
+include 'Includes/conecta.php';
 ?>
 <html lang="pt-br">
     <head>
