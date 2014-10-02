@@ -10,14 +10,18 @@ include 'Includes/conecta.php';
     </head>
     
     <body class="login">
-    <h1>Login</h1>
+    <fieldset id="acesso">
+        <h1>Login</h1>
     <br/><br/>
     <form action="login.php" method="post">
+        
+        
             <table border="0" class="table">
-                <tr><td>Login</td><td><input type="text" name="login" class="form-control" placeholder="Seu nome de usuário"></td></tr>
-                <tr><td>Senha</td><td><input type="password" name="senha" class="form-control" placeholder="Sua senha de acesso"></td></tr>
+                <tr><td><font color="black">Login</font></td><td><input type="text" name="login" class="form-control" id="form_login" placeholder="Seu nome de usuário"></td></tr>
+                <tr><td><font color="black">Senha</font></td><td><input type="password" name="senha" class="form-control" id="form_login" placeholder="Sua senha de acesso"></td></tr>
                 <tr><td colspan="2"><div align="right"><button class="btn btn-primary">Logar</button></div></td></tr>
             </table>
+        </fieldset>    
     </form>
     </body>
 </html>
