@@ -1,0 +1,15 @@
+body.login{
+    padding-top: 70px;
+    text-align: center;
+    padding-left: 500px;
+    padding-right: 500px;
+}
+
+body{
+    padding-top: 70px;
+}
+
+.principal{
+    padding: 40px 15px;
+    text-align: center;
+}
