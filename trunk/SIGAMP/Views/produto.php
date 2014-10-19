@@ -10,6 +10,8 @@ include '../Includes/cabecalho.php';
 <a href="atualizar_produto.php"><button class="btn btn-info">Atualizar Produtos</button></a>
 <a href="deletar_produto.php"><button class="btn btn-danger">Deletar Produtos</button></a>
 </center>
+
+<a href="acesso.php">Voltar</a>
 <?php
 include '../Includes/rodape.php';
 ?>

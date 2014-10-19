@@ -5,7 +5,7 @@ include '../Includes/cabecalho.php';
 
 <center>
     <h2>Cadastro de Produtos</h2>
-    <form action="../Controllers/enviar_cadastro.php" method="post">
+    <form action="../Models/enviar_cadastro.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome do Produto</td><td><input type="text" class="form-control" name="nome_produto" size="60" required></td></tr>
             <tr><td>Nome do Fabricante</td><td><input type="text" class="form-control" name="nome_fabricante" size="60" required></td></tr>

@@ -16,7 +16,7 @@ include '../CRUDs/banco_produto.php';
     <tr>
         <td><?=$lista['nm_produto']?></td>
 	<td><?=$lista['nm_fabricante_produto']?></td>
-        <td><a href="../Controllers/deletar_produto_bd.php?id=<?=$lista['cd_produto']?>"><button class="btn btn-danger">Deletar</button></a></td>
+        <td><a href="../Models/deletar_produto_bd.php?id=<?=$lista['cd_produto']?>"><button class="btn btn-danger">Deletar</button></a></td>
 	</tr>
     <?php
         }
