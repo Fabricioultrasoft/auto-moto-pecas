@@ -1,6 +1,8 @@
 <?php
 require('../Includes/conecta.php');
 require('../CRUDs/banco_produto.php');
+include '../Controllers/logica_usuario.php';
+verificaUsuario();
 
 $id = $_POST["id"];
 $nome = $_POST["nome_produto"];

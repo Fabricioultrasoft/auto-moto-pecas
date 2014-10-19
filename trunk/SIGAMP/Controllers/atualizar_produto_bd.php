@@ -2,7 +2,8 @@
 include '../Includes/conecta.php';
 include '../Includes/cabecalho.php';
 include '../CRUDs/banco_produto.php';
-
+include 'logica_usuario.php';
+verificaUsuario();
 $id = $_GET['id'];
 $busca = buscaProduto($conexao, $id)
 
