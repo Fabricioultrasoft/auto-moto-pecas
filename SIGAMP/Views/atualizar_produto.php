@@ -16,7 +16,7 @@ include '../CRUDs/banco_produto.php';
     <tr>
         <td><?=$lista['nm_produto']?></td>
 	<td><?=$lista['nm_fabricante_produto']?></td>
-        <td><a href="atualizar_produto_bd.php?id=<?=$lista['cd_produto']?>"><button class="btn btn-info">Atualizar</button></a></td>
+        <td><a href="../Controllers/atualizar_produto_bd.php?id=<?=$lista['cd_produto']?>"><button class="btn btn-info">Atualizar</button></a></td>
 	</tr>
     <?php
         }

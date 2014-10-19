@@ -10,7 +10,7 @@ $busca = buscaProduto($conexao, $id)
 
 <center>
     <h2>Atualização de Dados de Produtos</h2>
-    <form action="../Controllers/atualizar_cadastro.php" method="post">
+    <form action="../Models/atualizar_cadastro.php" method="post">
         <input type="hidden" value="<?=$busca['cd_produto']?>" name="id">
         <table border="0" class="table">
             <tr><td>Nome do Produto</td><td><input type="text" class="form-control" name="nome_produto" size="60" value="<?=$busca['nm_produto']?>"></td></tr>
@@ -21,7 +21,7 @@ $busca = buscaProduto($conexao, $id)
         </table>
         <button class="btn btn-success" type="submit">Atualizar</button>     
     </form>
-    <a href="produto.php">Voltar</a>
+    <a href="../Views/produto.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';
