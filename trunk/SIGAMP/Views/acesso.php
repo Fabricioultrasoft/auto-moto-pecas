@@ -38,10 +38,10 @@ usuarioEstaLogado();
     <li><a href="servico.php">Serviço</a><br></li>
     <li><a href="usuario.php">Usuário</a><br></li>
     <li><a href="cliente.php">Cliente</a><br></li>
-    <li><a href="veiculo.php">Veículo</a><br></li>
-    <li><a href="venda.php">Venda</a><br></li>
-    <li><a href="item.php">Item</a><br></li>
-    <li><a href="manutencao.php">Manutenção</a></li>
+    <li><a href="#">Veículo</a><br></li>
+    <li><a href="#">Venda</a><br></li>
+    <li><a href="#">Item</a><br></li>
+    <li><a href="#">Manutenção</a></li>
     <li><a href="sair.php">Sair</li>
 </ul>
 
