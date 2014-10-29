@@ -34,10 +34,10 @@ usuarioEstaLogado();
 <p class="text-success">Você está logado como <u><?=$_SESSION['UsuarioNome']?></u></p>
 
 <ul>
-    <li><a href="produto.php">Produto</a><br></li>
-    <li><a href="servico.php">Serviço</a><br></li>
-    <li><a href="usuario.php">Usuário</a><br></li>
-    <li><a href="cliente.php">Cliente</a><br></li>
+    <li><a href="listar_produto.php">Produto</a><br></li>
+    <li><a href="listar_servico.php">Serviço</a><br></li>
+    <li><a href="listar_usuario.php">Usuário</a><br></li>
+    <li><a href="listar_cliente.php">Cliente</a><br></li>
     <li><a href="#">Veículo</a><br></li>
     <li><a href="#">Venda</a><br></li>
     <li><a href="#">Item</a><br></li>

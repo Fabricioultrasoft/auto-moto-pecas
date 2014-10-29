@@ -8,7 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeUsuario($conexao,$id)){
-	header('Location: ../Views/deletar_usuario.php');
+	header('Location: ../Views/listar_usuario.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

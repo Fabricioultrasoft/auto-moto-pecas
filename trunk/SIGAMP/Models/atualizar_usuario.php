@@ -11,7 +11,7 @@ $senha = $_POST["senha_usuario"];
 $nivel = $_POST["nv_acesso"];
 
 if(alterarUsuario($conexao,$id,$nome,$cpf,$senha, $nivel)){
-	header('Location: ../Views/atualizar_usuario.php');
+	header('Location: ../Views/listar_usuario.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

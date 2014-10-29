@@ -23,7 +23,7 @@ verificaUsuario();
         </table>
         <button class="btn btn-success" type="submit">Cadastrar</button>     
     </form>
-    <a href="usuario.php">Voltar</a>
+    <a href="listar_usuario.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';

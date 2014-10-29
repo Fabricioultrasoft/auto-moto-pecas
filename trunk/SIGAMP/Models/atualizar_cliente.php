@@ -18,7 +18,7 @@ $email = $_POST["email_cliente"];
 $data = implode('-',array_reverse(explode('/',$_POST['aniversario_cliente'])));
 
 if(alterarCliente($conexao, $nome, $cpf, $rg, $data, $endereco, $cidade, $estado, $tel, $cel, $email)){
-	header('Location: ../Views/atualizar_cliente.php');
+	header('Location: ../Views/listar_cliente.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

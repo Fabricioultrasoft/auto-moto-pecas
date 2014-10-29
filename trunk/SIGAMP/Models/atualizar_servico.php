@@ -9,7 +9,7 @@ $nome = $_POST["nome_servico"];
 $preco = $_POST["preco_servico"];
 
 if(alterarServico($conexao,$id,$nome,$preco)){
-	header('Location: ../Views/atualizar_servico.php');
+	header('Location: ../Views/listar_servico.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

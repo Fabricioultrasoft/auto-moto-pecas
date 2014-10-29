@@ -17,7 +17,7 @@ verificaUsuario();
         </table>
         <button class="btn btn-success" type="submit">Cadastrar</button>     
     </form>
-    <a href="produto.php">Voltar</a>
+    <a href="listar_produto.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';

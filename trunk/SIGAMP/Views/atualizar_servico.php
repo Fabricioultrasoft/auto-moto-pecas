@@ -25,7 +25,7 @@ verificaUsuario();
     ?>
 	</table>
 </center>
-<a href="servico.php">Voltar</a>
+<a href="lista_servico.php">Voltar</a>
 
 <?php
 include '../Includes/rodape.php';
