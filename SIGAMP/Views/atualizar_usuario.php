@@ -38,7 +38,7 @@ verificaUsuario();
     ?>
 	</table>
 </center>
-<a href="usuario.php">Voltar</a>
+<a href="lista_usuario.php">Voltar</a>
 
 <?php
 include '../Includes/rodape.php';

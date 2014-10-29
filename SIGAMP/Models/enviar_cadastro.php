@@ -11,7 +11,7 @@ $preco = $_POST["preco_produto"];
 $desc = $_POST["desc_produto"];
 
 if(insereProduto($conexao, $nome, $fabricante, $qtdd, $preco, $desc)){
-    header('Location: ../Views/cadastro_produto.php');
+    header('Location: ../Views/listar_produto.php');
     die;
 }else{
     $msg = mysqli_error($conexao)    ;

@@ -8,9 +8,10 @@ verificaUsuario();
 
 <center>
 <h2>Lista de Usuarios</h2>
+<p align="right"><a href="cadastro_usuario.php"><button class="btn btn-info">Cadastrar</button></a></p>
 
 <table class="table table-striped table-bordered">
-    <tr><td>Código</td><td>Nome do Usuario</td><td>CPF do Usuário</td><td>Senha do Usuário</td><td>Nível de Acesso</td></tr>
+    <tr><td>Código</td><td>Nome do Usuario</td><td>CPF do Usuário</td><td>Senha do Usuário</td><td>Nível de Acesso</td><td>Atualizar</td><td>Deletar</td></tr>
         <?php
             $usuarios = listarUsuarios($conexao);
             foreach($usuarios as $lista){
@@ -32,13 +33,16 @@ verificaUsuario();
                 echo("Auxiliar");
             }
 	?>        
-        </td></tr>
+        </td>
+        <td><a href="../Controllers/atualizar_usuario_bd.php?id=<?=$lista['cd_usuario']?>"><button class="btn btn-info">Atualizar</button></a></td>
+        <td><a href="../Models/deletar_usuario_bd.php?id=<?=$lista['cd_usuario']?>"><button class="btn btn-danger">Deletar</button></a></td>
+    </tr>
     <?php
         }
     ?>
 	</table>
 </center>
-<a href="usuario.php">Voltar</a>
+<a href="acesso.php">Pagina Principal</a>
 
 <?php
 include '../Includes/rodape.php';

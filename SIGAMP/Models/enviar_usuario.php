@@ -11,7 +11,7 @@ $nivel = $_POST["nv_acesso"];
 
 
 if(insereUsuario($conexao, $nome, $cpf, $senha, $nivel)){
-    header('Location: ../Views/cadastro_usuario.php');
+    header('Location: ../Views/listar_usuario.php');
     die;
 }else{
     $msg = mysqli_error($conexao)    ;

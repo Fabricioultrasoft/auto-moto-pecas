@@ -8,7 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeProduto($conexao,$id)){
-	header('Location: ../Views/deletar_produto.php');
+	header('Location: ../Views/listar_produto.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

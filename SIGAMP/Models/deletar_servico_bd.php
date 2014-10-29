@@ -8,7 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeServico($conexao,$id)){
-	header('Location: ../Views/deletar_servico.php');
+	header('Location: ../Views/listar_servico.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

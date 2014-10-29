@@ -8,7 +8,7 @@ $nome = $_POST["nome_servico"];
 $preco = $_POST["preco_servico"];
 
 if(insereServico($conexao, $nome, $preco)){
-    header('Location: ../Views/cadastro_servico.php');
+    header('Location: ../Views/listar_servico.php');
     die;
 }else{
     $msg = mysqli_error($conexao)    ;
