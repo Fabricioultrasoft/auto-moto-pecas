@@ -10,7 +10,7 @@ verificaUsuario();
     <form action="../Models/enviar_usuario.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome de Usuário</td><td><input type="text" class="form-control" maxlength="40" name="nome_usuario" size="60" required></td></tr>
-            <tr><td>CPF do Usuário</td><td><input type="number" maxlength="11" class="form-control" name="cpf_usuario" size="60" required></td></tr>
+            <tr><td>CPF do Usuário</td><td><input type="number" min="1" max="99999999999" class="form-control" name="cpf_usuario" size="60" required></td></tr>
             <tr><td>Senha</td><td><input type="password" class="form-control" name="senha_usuario" min="1" size="20" required></td></tr>
             <tr><td>Nivel de Acesso</td><td>
                     <select name="nv_acesso" class="form-control">
