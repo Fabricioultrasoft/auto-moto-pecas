@@ -11,7 +11,7 @@ verificaUsuario();
 <p align="right"><a href="cadastro_usuario.php"><button class="btn btn-info">Cadastrar</button></a></p>
 
 <table class="table table-striped table-bordered">
-    <tr><td>Código</td><td>Nome do Usuario</td><td>CPF do Usuário</td><td>Senha do Usuário</td><td>Nível de Acesso</td><td>Atualizar</td><td>Deletar</td></tr>
+    <tr><td>Código</td><td>Nome do Usuario</td><td>CPF do Usuário</td><td>Nível de Acesso</td><td>Atualizar</td><td>Deletar</td></tr>
         <?php
             $usuarios = listarUsuarios($conexao);
             foreach($usuarios as $lista){
@@ -20,7 +20,6 @@ verificaUsuario();
 	<td><?=$lista['cd_usuario']?></td>
 	<td><?=$lista['nm_usuario']?></td>
 	<td><?=$lista['cpf_usuario']?></td>
-	<td><?=$lista['cd_senha_usuario']?></td>
 	<td>
         <?php
             if($lista['cd_tipo_usuario'] == 1){

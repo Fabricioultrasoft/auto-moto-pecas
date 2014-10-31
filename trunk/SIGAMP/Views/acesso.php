@@ -38,7 +38,7 @@ usuarioEstaLogado();
     <li><a href="listar_servico.php">Serviço</a><br></li>
     <li><a href="listar_usuario.php">Usuário</a><br></li>
     <li><a href="listar_cliente.php">Cliente</a><br></li>
-    <li><a href="#">Veículo</a><br></li>
+    <li><a href="listar_veiculo.php">Veículo</a><br></li>
     <li><a href="#">Venda</a><br></li>
     <li><a href="#">Item</a><br></li>
     <li><a href="#">Manutenção</a></li>
