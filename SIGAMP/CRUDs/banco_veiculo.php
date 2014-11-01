@@ -1,6 +1,6 @@
 <?php
 function insereVeiculo($conexao, $nome, $cpf, $placa, $cor, $modelo, $marca, $ano){
-    $query = "insert into veiculo (nm_cliente, cpf_cliente, nm_cor_veiculo, cd_placa_veiculo, nm_modelo_veiculo, nm_marca_veiculo, aa_veiculo)VALUES('{$nome}','{$cpf}','{$cor}','{$placa}','{$modelo}','{$marca}','{$ano}')";
+    $query = "insert into veiculo (nm_cliente, CLIENTE_cpf_cliente, nm_cor_veiculo, cd_placa_veiculo, nm_modelo_veiculo, nm_marca_veiculo, aa_veiculo)VALUES('{$nome}','{$cpf}','{$cor}','{$placa}','{$modelo}','{$marca}','{$ano}')";
     return mysqli_query($conexao,$query);
 }
 

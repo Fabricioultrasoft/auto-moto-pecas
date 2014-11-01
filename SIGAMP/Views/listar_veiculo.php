@@ -19,7 +19,7 @@ verificaUsuario();
         
     <tr>
         <td><?=$lista['nm_cliente']?></td>
-	<td><?=$lista['cpf_cliente']?></td>
+	<td><?=$lista['CLIENTE_cpf_cliente']?></td>
 	<td><?=$lista['cd_placa_veiculo']?></td>
 	<td><?=$lista['nm_cor_veiculo']?></td>
 	<td><?=$lista['nm_marca_veiculo']?></td>
