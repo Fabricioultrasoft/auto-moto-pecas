@@ -4,6 +4,7 @@ require('../CRUDs/banco_cliente.php');
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
 
+$id = $_POST["id"];
 $nome = $_POST["nome_cliente"];
 $cpf = $_POST["cpf_cliente"];
 $rg = $_POST["rg_cliente"];
@@ -17,7 +18,7 @@ $email = $_POST["email_cliente"];
 
 $data = implode('-',array_reverse(explode('/',$_POST['aniversario_cliente'])));
 
-if(alterarCliente($conexao, $nome, $cpf, $rg, $data, $endereco, $cidade, $estado, $tel, $cel, $email)){
+if(alterarCliente($conexao, $id, $nome, $cpf, $rg, $data, $endereco, $cidade, $estado, $tel, $cel, $email)){
 	header('Location: ../Views/listar_cliente.php');
 	die();
 } else {

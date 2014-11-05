@@ -20,8 +20,8 @@ function buscaCliente($conexao, $id){
 	return mysqli_fetch_assoc($resultado);
 }
 
-function alterarCliente($conexao, $nome, $cpf, $rg, $data, $endereco, $cidade, $estado, $tel, $cel, $email){
-        $query = "update cliente set nm_cliente='{$nome}',dt_nascimento_cliente='{$data}',cd_registro_geral_cliente='{$rg}',nm_endereco_cliente='{$endereco}',nm_cidade_cliente='{$cidade}',sg_estado_cliente='{$estado}',cd_telefone_um_cliente='{$tel}',cd_telefone_dois_cliente='{$cel}',nm_email_cliente='{$email}' where cpf_cliente = '{$cpf}'";
+function alterarCliente($conexao, $id, $nome, $cpf, $rg, $data, $endereco, $cidade, $estado, $tel, $cel, $email){
+        $query = "update cliente set nm_cliente='{$nome}', cpf_cliente='{$cpf}',dt_nascimento_cliente='{$data}',cd_registro_geral_cliente='{$rg}',nm_endereco_cliente='{$endereco}',nm_cidade_cliente='{$cidade}',sg_estado_cliente='{$estado}',cd_telefone_um_cliente='{$tel}',cd_telefone_dois_cliente='{$cel}',nm_email_cliente='{$email}' where id_cliente = '{$id}'";
 	return mysqli_query($conexao, $query);
 }
 
