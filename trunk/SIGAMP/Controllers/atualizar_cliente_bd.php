@@ -12,6 +12,7 @@ $busca = buscaCliente($conexao, $id)
 <center>
     <h2>Atualização de Dados de Clientes</h2>
     <form action="../Models/atualizar_cliente.php" method="post">
+        <input type="hidden" name="id" value="<?=$busca['id_cliente']?>">
         <table border="0" class="table">
             <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" size="60" value="<?=$busca['nm_cliente']?>"></td></tr>
             <tr><td>CPF do Cliente</td><td><input type="number" class="form-control" name="cpf_cliente" size="60" value="<?=$busca['cpf_cliente']?>"></td></tr>
@@ -57,7 +58,7 @@ $busca = buscaCliente($conexao, $id)
         </table>
         <button class="btn btn-success" type="submit">Atualizar</button>     
     </form>
-    <a href="../Views/cliente.php">Voltar</a>
+    <a href="../Views/listar_cliente.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';
