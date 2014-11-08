@@ -18,6 +18,7 @@ $email = $_POST["email_cliente"];
 $data = implode('-',array_reverse(explode('/',$_POST['aniversario_cliente'])));
 
 if(insereCliente($conexao, $nome, $cpf, $rg, $data, $endereco, $cidade, $estado, $tel, $cel, $email)){
+    $_SESSION["success"] = "Cadastrado com sucesso";
     header('Location: ../Views/listar_cliente.php');
     die;
 }else{

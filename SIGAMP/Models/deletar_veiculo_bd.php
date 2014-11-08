@@ -8,6 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeVeiculo($conexao,$id)){
+        $_SESSION["success"] = "Deletado com sucesso";
 	header('Location: ../Views/listar_veiculo.php');
 	die();
 } else {

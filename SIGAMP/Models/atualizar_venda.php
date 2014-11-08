@@ -10,6 +10,7 @@ $data = date("Y-m-d");
 $usuario = usuarioLogado();
 
 if(alterarVenda($conexao,$id,$total,$data,$usuario)){
+        $_SESSION["success"] = "Atualizado com sucesso";
 	header('Location: ../Views/listar_venda.php');
 	die();
 } else {

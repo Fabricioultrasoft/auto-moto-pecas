@@ -15,7 +15,7 @@ $busca = buscaVeiculo($conexao, $id)
         <table border="0" class="table">
             <input type="hidden" name="id" value="<?=$busca['cd_veiculo']?>">
             <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" value="<?=$busca['nm_cliente']?>" size="60" required disabled=""></td></tr>
-            <tr><td>CPF</td><td><input type="number" class="form-control" name="cpf_cliente" min="1" max="99999999999" value="<?=$busca['cpf_cliente']?>" size="11" required disabled=""></td></tr>
+            <tr><td>CPF</td><td><input type="text" class="form-control" name="cpf_cliente" value="<?=$busca['CLIENTE_cpf_cliente']?>" required disabled=""></td></tr>
             <tr><td>Placa</td><td><input type="text" class="form-control" name="placa" required value="<?=$busca['cd_placa_veiculo']?>"></td></tr>
             <tr><td>Cor</td><td><input type="text" class="form-control" name="cor" size="20" required value="<?=$busca['nm_cor_veiculo']?>"></td></tr>
             <tr><td>Marca</td><td><input type="text" class="form-control" name="marca" size="20" required value="<?=$busca['nm_marca_veiculo']?>"></td></tr>

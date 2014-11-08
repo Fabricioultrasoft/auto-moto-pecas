@@ -8,6 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeVenda($conexao,$id)){
+        $_SESSION["success"] = "Deletado com sucesso";
 	header('Location: ../Views/venda.php');
 	die();
 } else {

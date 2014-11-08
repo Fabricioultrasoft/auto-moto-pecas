@@ -8,6 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeUsuario($conexao,$id)){
+        $_SESSION["success"] = "Deletado com sucesso";
 	header('Location: ../Views/listar_usuario.php');
 	die();
 } else {

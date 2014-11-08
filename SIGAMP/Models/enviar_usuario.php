@@ -11,6 +11,7 @@ $nivel = $_POST["nv_acesso"];
 
 
 if(insereUsuario($conexao, $nome, $cpf, $senha, $nivel)){
+    $_SESSION["success"] = "Cadastrado com sucesso";
     header('Location: ../Views/listar_usuario.php');
     die;
 }else{

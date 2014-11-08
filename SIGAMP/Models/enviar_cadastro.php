@@ -11,6 +11,7 @@ $preco = $_POST["preco_produto"];
 $desc = $_POST["desc_produto"];
 
 if(insereProduto($conexao, $nome, $fabricante, $qtdd, $preco, $desc)){
+    $_SESSION["success"] = "Cadastrado com sucesso";
     header('Location: ../Views/listar_produto.php');
     die;
 }else{
