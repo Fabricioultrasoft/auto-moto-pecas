@@ -11,6 +11,7 @@ $senha = $_POST["senha_usuario"];
 $nivel = $_POST["nv_acesso"];
 
 if(alterarUsuario($conexao,$id,$nome,$cpf,$senha, $nivel)){
+        $_SESSION["success"] = "Atualizado com sucesso";
 	header('Location: ../Views/listar_usuario.php');
 	die();
 } else {

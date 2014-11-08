@@ -9,6 +9,13 @@ verificaUsuario();
 
 <center>
 <h2>Lista de Veículos</h2>
+<?php
+if(isset($_SESSION["success"])){?>
+	<p class="alert-success"><?=$_SESSION["success"]?></p>
+<?php
+	unset($_SESSION["success"]);
+}
+?>
 <p align="right"><a href="cadastro_veiculo.php"><button class="btn btn-info">Cadastrar</button></a></p>
 <table class="table table-striped table-bordered">
     <tr><td>Nome do Cliente</td><td>CPF</td><td>Placa do Veículo</td><td>Cor do Veículo</td><td>Marca do Veículo</td><td>Modelo do Veículo</td><td>Ano do Veículo</td><td>Atualizar</td><td>Deletar</td></tr>

@@ -8,6 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeServico($conexao,$id)){
+        $_SESSION["success"] = "Deletado com sucesso";
 	header('Location: ../Views/listar_servico.php');
 	die();
 } else {

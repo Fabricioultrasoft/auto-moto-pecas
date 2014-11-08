@@ -7,7 +7,7 @@ verificaUsuario();
 ?>
 <form action="../Models/busca_Cliente_Venda.php" method="post">
     CPF <input type="number" name="cpf" placeholder="Somente Números" required=""> <button class="btn btn-primary" type="submit">Buscar</button><br>
-    <a href="listar_venda.php">Página Principal</a>
+    <a href="venda.php">Página Principal</a>
 </form>
 
 <?php

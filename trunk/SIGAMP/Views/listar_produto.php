@@ -6,8 +6,17 @@ include '../Controllers/logica_usuario.php';
 verificaUsuario();
 ?>
 
+
 <center>
 <h2>Lista de Produtos</h2>
+<?php
+if(isset($_SESSION["success"])){?>
+	<p class="alert-success"><?=$_SESSION["success"]?></p>
+<?php
+	unset($_SESSION["success"]);
+}
+?>
+
 <p align="right"><a href="cadastro_produto.php"><button class="btn btn-info">Cadastrar</button></a></p>
 
 <table class="table table-striped table-bordered">
@@ -22,7 +31,7 @@ verificaUsuario();
 	<td><?=$lista['nm_fabricante_produto']?></td>
 	<td><?=$lista['qt_produto']?></td>
 	<td><?=$lista['vl_produto']?></td>
-	<td><?=substr($lista['ds_produto'], 0, 20)?></td>
+	<td><?=$lista['ds_produto']?></td>
         <td><a href="../Controllers/atualizar_produto_bd.php?id=<?=$lista['cd_produto']?>"><button class="btn btn-info">Atualizar</button></a></td>
         <td><a href="../Models/deletar_produto_bd.php?id=<?=$lista['cd_produto']?>"><button class="btn btn-danger">Deletar</button></a></td>
 	</tr>

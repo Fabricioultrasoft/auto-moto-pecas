@@ -8,6 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeCliente($conexao,$id)){
+        $_SESSION["success"] = "Deletado com sucesso";
 	header('Location: ../Views/listar_cliente.php');
 	die();
 } else {

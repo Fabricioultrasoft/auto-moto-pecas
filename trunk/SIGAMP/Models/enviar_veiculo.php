@@ -14,6 +14,7 @@ $ano = $_POST["ano"];
 
 
 if(insereVeiculo($conexao, $nome, $cpf, $placa, $cor, $modelo, $marca, $ano)){
+    $_SESSION["success"] = "Cadastrado com sucesso";
     header('Location: ../Views/listar_veiculo.php');
     die;
 }else{

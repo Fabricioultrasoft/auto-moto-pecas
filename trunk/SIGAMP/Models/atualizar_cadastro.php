@@ -12,7 +12,8 @@ $preco = $_POST["preco_produto"];
 $desc = $_POST["desc_produto"];
 
 if(alterarProduto($conexao,$id,$nome,$fabricante,$qtd, $preco, $desc)){
-	header('Location: ../Views/listar_produto.php');
+     $_SESSION["success"] = "Atualizado com sucesso";
+    header('Location: ../Views/listar_produto.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

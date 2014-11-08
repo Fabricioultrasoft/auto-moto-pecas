@@ -16,6 +16,7 @@ $usuario = usuarioLogado();
 
 
 if(insereVenda($conexao,$nome,$codigo,$data, $hora, $cpf, $nm_prod, $total, $usuario)){
+    $_SESSION["success"] = "Lançado no sistema com sucesso";
     header('Location: ../Views/cadastro_venda_produto.php?nome='.$nome.'&cpf='.$cpf);
     die;
 }else{

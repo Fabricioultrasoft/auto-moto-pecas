@@ -12,6 +12,7 @@ $modelo = $_POST["modelo"];
 $ano = $_POST["ano"];
 
 if(alterarVeiculo($conexao,$id,$placa,$cor,$marca,$modelo,$ano)){
+     $_SESSION["success"] = "Atualizado com sucesso";
 	header('Location: ../Views/listar_veiculo.php');
 	die();
 } else {

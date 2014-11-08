@@ -8,6 +8,7 @@ $nome = $_POST["nome_servico"];
 $preco = $_POST["preco_servico"];
 
 if(insereServico($conexao, $nome, $preco)){
+    $_SESSION["success"] = "Cadastrado com sucesso";
     header('Location: ../Views/listar_servico.php');
     die;
 }else{

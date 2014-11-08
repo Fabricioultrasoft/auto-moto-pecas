@@ -22,7 +22,7 @@ $busca = buscaProduto($conexao, $id)
         </table>
         <button class="btn btn-success" type="submit">Atualizar</button>     
     </form>
-    <a href="../Views/produto.php">Voltar</a>
+    <a href="../Views/listar_produto.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';

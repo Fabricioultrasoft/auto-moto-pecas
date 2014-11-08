@@ -8,6 +8,13 @@ verificaUsuario();
 
 <center>
 <h2>Lista de Vendas</h2>
+<?php
+if(isset($_SESSION["success"])){?>
+	<p class="alert-success"><?=$_SESSION["success"]?></p>
+<?php
+	unset($_SESSION["success"]);
+}
+?>
 <p align="right"><a href="cadastro_venda.php"><button class="btn btn-info">Cadastrar</button></a></p>
 <table class="table table-striped table-bordered">
     <tr><td>Codigo da Venda</td><td>Data da Venda</td><td>Usuário</td><td>Cliente</td><td>Produto</td><td>Valor</td><td>Atualizar</td><td>Deletar</td></tr>

@@ -11,6 +11,13 @@ $cpf = $_GET['cpf'];
 
 <center>
 <h2>Lançamento de Vendas</h2>
+<?php
+if(isset($_SESSION["success"])){?>
+	<p class="alert-success"><?=$_SESSION["success"]?></p>
+<?php
+	unset($_SESSION["success"]);
+}
+?>
 </center>
 Cliente: <?=$nome?><br>
 CPF: <?=$cpf?><br><br>
