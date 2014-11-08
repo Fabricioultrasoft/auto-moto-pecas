@@ -8,7 +8,7 @@ verificaUsuario();
 $id = $_GET["id"];
 
 if(removeVenda($conexao,$id)){
-	header('Location: ../Views/listar_venda.php');
+	header('Location: ../Views/venda.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);

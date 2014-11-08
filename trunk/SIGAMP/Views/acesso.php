@@ -39,7 +39,7 @@ usuarioEstaLogado();
     <li><a href="listar_usuario.php">Usuário</a><br></li>
     <li><a href="listar_cliente.php">Cliente</a><br></li>
     <li><a href="listar_veiculo.php">Veículo</a><br></li>
-    <li><a href="listar_venda.php">Venda</a><br></li>
+    <li><a href="venda.php">Venda</a><br></li>
     <!--<li><a href="listar_item.php">Item</a><br></li>
     <li><a href="#">Manutenção</a></li>-->
     <li><a href="sair.php">Sair</li>

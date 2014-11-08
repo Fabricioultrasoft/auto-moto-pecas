@@ -11,7 +11,7 @@ $cliente = buscaCliente($conexao,$cpf);
 if($cliente != null){
     $nome = $cliente['nm_cliente'];
     $cpf = $cliente['cpf_cliente'];
-    header('Location: ../Views/cadastro_venda.php?cliente=true&nome='.$nome.'&cpf='.$cpf);
+    header('Location: ../Views/cadastro_venda_produto.php?cliente=true&nome='.$nome.'&cpf='.$cpf);
     die();
 } else if($cliente == 0) {
     header('Location: ../Views/cadastro_cliente.php');

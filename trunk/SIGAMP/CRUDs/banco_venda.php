@@ -1,18 +1,60 @@
 <?php
-function insereVenda($conexao, $data, $cpf, $total, $usuario){
-    $query = "insert into venda (dt_venda, USUARIO_cd_usuario, CLIENTE_cpf_cliente,vl_total_servico_produto_venda)VALUES('{$data}','{$usuario}','{$cpf}',{$total})";
+function insereVenda($conexao, $nome, $id, $data, $hora,$cpf, $nm_prod, $total, $usuario){
+    $query = "insert into venda (CLIENTE_nm_cliente,PRODUTO_cd_produto, dt_venda, hr_venda, CLIENTE_cpf_cliente, PRODUTO_nm_produto, PRODUTO_vl_produto, USUARIO_nm_usuario) VALUES('{$nome}',{$id},'{$data}','{$hora}','{$cpf}','{$nm_prod}',{$total},'{$usuario}')";
     return mysqli_query($conexao,$query);
 }
 
 function listarVendas($conexao){
 	$vendas = array();
-	$query = "select * from venda order by dt_venda";
+	$query = "select * from venda order by hr_venda desc";
 	$resultado = mysqli_query($conexao, $query);
 	while($venda = mysqli_fetch_assoc($resultado)){
             array_push($vendas, $venda);
 	}
 	return $vendas;
 }
+
+function listarVendasProduto($conexao){
+	$vendas = array();
+	$query = "select * from venda order by PRODUTO_nm_produto";
+	$resultado = mysqli_query($conexao, $query);
+	while($venda = mysqli_fetch_assoc($resultado)){
+            array_push($vendas, $venda);
+	}
+	return $vendas;
+}
+
+function listarVendasValor($conexao){
+	$vendas = array();
+	$query = "select * from venda order by PRODUTO_vl_produto desc";
+	$resultado = mysqli_query($conexao, $query);
+	while($venda = mysqli_fetch_assoc($resultado)){
+            array_push($vendas, $venda);
+	}
+	return $vendas;
+}
+
+function listarVendasUsuario($conexao){
+	$vendas = array();
+	$query = "select * from venda order by USUARIO_nm_usuario";
+	$resultado = mysqli_query($conexao, $query);
+	while($venda = mysqli_fetch_assoc($resultado)){
+            array_push($vendas, $venda);
+	}
+	return $vendas;
+}
+
+function listarVendasCliente($conexao){
+	$vendas = array();
+	$query = "select * from venda order by CLIENTE_nm_cliente";
+	$resultado = mysqli_query($conexao, $query);
+	while($venda = mysqli_fetch_assoc($resultado)){
+            array_push($vendas, $venda);
+	}
+	return $vendas;
+}
+
+
 
 function buscaVenda($conexao, $id){
 	$query = "select * from venda where cd_venda = {$id}";
