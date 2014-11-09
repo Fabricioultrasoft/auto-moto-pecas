@@ -14,12 +14,12 @@ $busca = buscaCliente($conexao, $id)
     <form action="../Models/atualizar_cliente.php" method="post">
         <input type="hidden" name="id" value="<?=$busca['id_cliente']?>">
         <table border="0" class="table">
-            <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" size="60" value="<?=$busca['nm_cliente']?>"></td></tr>
-            <tr><td>CPF do Cliente</td><td><input type="number" class="form-control" name="cpf_cliente" size="60" value="<?=$busca['cpf_cliente']?>"></td></tr>
-            <tr><td>RG do Cliente</td><td><input type="number" class="form-control" name="rg_cliente" min="1" size="20" value="<?=$busca['cd_registro_geral_cliente']?>"></td></tr>
-            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_cliente" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_cliente']?>"></td></tr>
-            <tr><td>Endereço do Cliente</td><td><input type="text" class="form-control" name="endereco_cliente" size="60" value="<?=$busca['nm_endereco_cliente']?>"></td></tr>
-            <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_cliente" size="60" value="<?=$busca['nm_cidade_cliente']?>"></td></tr>
+            <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" size="60" value="<?=$busca['nm_cliente']?>" required></td></tr>
+            <tr><td>CPF do Cliente</td><td><input type="number" class="form-control" name="cpf_cliente" size="60" value="<?=$busca['cpf_cliente']?>" required></td></tr>
+            <tr><td>RG do Cliente</td><td><input type="number" class="form-control" name="rg_cliente" min="1" size="20" value="<?=$busca['cd_registro_geral_cliente']?>" required></td></tr>
+            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_cliente" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_cliente']?>" required></td></tr>
+            <tr><td>Endereço do Cliente</td><td><input type="text" class="form-control" name="endereco_cliente" size="60" value="<?=$busca['nm_endereco_cliente']?>" required></td></tr>
+            <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_cliente" size="60" value="<?=$busca['nm_cidade_cliente']?>" required></td></tr>
             <tr><td>Estado</td><td>
                     <select name="estado_cliente" class="form-control">
                         <option value="AC">Acre</option>
@@ -52,9 +52,9 @@ $busca = buscaCliente($conexao, $id)
                         
                     </select>    
                 </td></tr>
-            <tr><td>Telefone Fixo</td><td><input type="tel" class="form-control" name="tel_cliente" size="60" value="<?=$busca['cd_telefone_um_cliente']?>"></td></tr>
-            <tr><td>Telefone Celular</td><td><input type="tel" class="form-control" name="cel_cliente" size="60" value="<?=$busca['cd_telefone_dois_cliente']?>"></td></tr>
-            <tr><td>E-Mail do Cliente</td><td><input type="email" class="form-control" name="email_cliente" size="60" value="<?=$busca['nm_email_cliente']?>"></td></tr>
+            <tr><td>Telefone Fixo</td><td><input type="number" class="form-control" name="tel_cliente" size="60" value="<?=$busca['cd_telefone_um_cliente']?>" required></td></tr>
+            <tr><td>Telefone Celular</td><td><input type="number" class="form-control" name="cel_cliente" size="60" value="<?=$busca['cd_telefone_dois_cliente']?>" required></td></tr>
+            <tr><td>E-Mail do Cliente</td><td><input type="email" class="form-control" name="email_cliente" size="60" value="<?=$busca['nm_email_cliente']?>" required></td></tr>
         </table>
         <button class="btn btn-success" type="submit">Atualizar</button>     
     </form>

@@ -6,7 +6,7 @@ verificaUsuario();
 ?>
 
 <center>
-    <h2>Cadastro de Produtos</h2>
+    <h2>Cadastro de Usuário</h2>
     <form action="../Models/enviar_usuario.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome de Usuário</td><td><input type="text" class="form-control" maxlength="40" name="nome_usuario" size="60" required></td></tr>
