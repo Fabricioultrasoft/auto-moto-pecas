@@ -4,13 +4,55 @@ include '../Includes/cabecalho.php';
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
 ?>
+ <script type="text/javascript">
+    
+/*function formatar(mascara, documento){
+	
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}*/
+//adiciona mascara ao CPF
+function MascaraCPF(cpf){
+	if(mascaraInteiro(cpf)==false){
+		event.returnValue = false;
+	}	
+	return formataCampo(cpf, '000.000.000-00', event);
+}
+//valida o CPF digitado
+function ValidarCPF(Objcpf){
+	var cpf = Objcpf.value;
+	exp = /\.|\-/g
+	cpf = cpf.toString().replace( exp, "" ); 
+	var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
+	var soma1=0, soma2=0;
+	var vlr =11;
+	
+	for(i=0;i<9;i++){
+		soma1+=eval(cpf.charAt(i)*(vlr-1));
+		soma2+=eval(cpf.charAt(i)*vlr);
+		vlr--;
+	}	
+	soma1 = (((soma1*10)%11)==10 ? 0:((soma1*10)%11));
+	soma2=(((soma2+(2*soma1))*10)%11);
+	
+	var digitoGerado=(soma1*10)+soma2;
+	if(digitoGerado!=digitoDigitado)	
+		alert('CPF Invalido!');		
+}
+</script>
 
 <center>
     <h2>Cadastro de Clientes</h2>
     <form action="../Models/enviar_cliente.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" size="60" required></td></tr>
-            <tr><td>CPF do Cliente</td><td><input type="number" class="form-control" name="cpf_cliente" size="60" required></td></tr>
+            <tr><td>CPF do Cliente</td><td><input type="number" onblur="ValidarCPF(form1.cpf_usuario)" OnKeyPress="MascaraCPF(form1.cpf_usuario);" class="form-control" name="cpf_cliente" size="60" required></td></tr>
             <tr><td>RG do Cliente</td><td><input type="number" class="form-control" name="rg_cliente" min="1" size="20" required></td></tr>
             <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" min="1920-12-31" max="1996-01-01" name="aniversario_cliente" placeholder="DD/MM/AAAA" size="20" required></td></tr>
             <tr><td>Endereço do Cliente</td><td><input type="text" class="form-control" name="endereco_cliente" size="60" required></td></tr>
