@@ -18,6 +18,15 @@ if(isset($_SESSION["success"])){?>
 	unset($_SESSION["success"]);
 }
 ?>
+
+<?php
+if(isset($_SESSION["danger"])){?>
+	<p class="alert-danger"><?=$_SESSION["danger"]?></p>
+<?php
+	unset($_SESSION["danger"]);
+}
+?>
+        
 </center>
 Cliente: <?=$nome?><br>
 CPF: <?=$cpf?><br><br>

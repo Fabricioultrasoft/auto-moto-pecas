@@ -6,7 +6,7 @@ function insereVenda($conexao, $nome, $id, $data, $hora,$cpf, $nm_prod, $total, 
 
 function listarVendas($conexao){
 	$vendas = array();
-	$query = "select * from venda order by hr_venda desc";
+	$query = "select * from venda order by dt_venda desc";
 	$resultado = mysqli_query($conexao, $query);
 	while($venda = mysqli_fetch_assoc($resultado)){
             array_push($vendas, $venda);
