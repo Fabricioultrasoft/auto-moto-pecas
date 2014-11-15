@@ -3,6 +3,7 @@ include '../Includes/conecta.php';
 include '../Includes/cabecalho.php';
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
+verificaNivel();
 ?>
 
 <center>

@@ -34,6 +34,7 @@ usuarioEstaLogado();
 <p class="text-success">Você está logado como <u><?=$_SESSION['UsuarioNome']?></u></p>
 
 <ul>
+    <li><a href="listar_os.php">Ordens de Serviço</a></li>
     <li><a href="listar_produto.php">Produto</a><br></li>
     <li><a href="listar_servico.php">Serviço</a><br></li>
     <li><a href="listar_usuario.php">Usuário</a><br></li>
