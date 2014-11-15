@@ -20,6 +20,12 @@ function buscaVeiculo($conexao, $id){
 	return mysqli_fetch_assoc($resultado);
 }
 
+function buscaVeiculoServico($conexao, $cpf){
+	$query = "select * from veiculo where CLIENTE_cpf_cliente = '{$cpf}'";
+	$resultado = mysqli_query($conexao, $query);
+	return mysqli_fetch_assoc($resultado);
+}
+
 function alterarVeiculo($conexao,$id,$placa,$cor,$marca,$modelo,$ano){
         $query = "update veiculo set cd_placa_veiculo='{$placa}',nm_cor_veiculo='{$cor}',nm_marca_veiculo='{$marca}',nm_modelo_veiculo='{$modelo}',aa_veiculo={$ano} where cd_veiculo = {$id}";
 	return mysqli_query($conexao, $query);

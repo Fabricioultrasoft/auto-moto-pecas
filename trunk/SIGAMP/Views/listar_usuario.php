@@ -4,6 +4,7 @@ include '../Includes/cabecalho.php';
 include '../CRUDs/banco_usuario.php';
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
+verificaNivel();
 ?>
 
 <center>

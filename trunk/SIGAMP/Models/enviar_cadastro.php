@@ -3,6 +3,7 @@ include '../CRUDs/banco_produto.php';
 include '../Includes/conecta.php';
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
+verificaNivel();
 
 $nome = $_POST["nome_produto"];
 $fabricante = $_POST["nome_fabricante"];

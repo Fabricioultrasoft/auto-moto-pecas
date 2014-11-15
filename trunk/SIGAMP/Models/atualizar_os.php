@@ -1,20 +1,16 @@
 <?php
 require('../Includes/conecta.php');
-require('../CRUDs/banco_usuario.php');
+require('../CRUDs/banco_ordem.php');
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
 
 $id = $_POST["id"];
-$nome = $_POST["nome_usuario"];
-$cpf = $_POST["cpf_usuario"];
-$senha = $_POST["senha_usuario"];
-$nivel = $_POST["nv_acesso"];
+$desc = $_POST["desc"];
 
-$codificado = sha1($senha);
 
-if(alterarUsuario($conexao,$id,$nome,$cpf,$codificado, $nivel)){
+if(alterarOrdem($conexao,$id,$desc)){
         $_SESSION["success"] = "Atualizado com sucesso";
-	header('Location: ../Views/listar_usuario.php');
+	header('Location: ../Views/listar_os.php');
 	die();
 } else {
 	$msg = mysqli_error($conexao);
@@ -24,3 +20,6 @@ if(alterarUsuario($conexao,$id,$nome,$cpf,$codificado, $nivel)){
 }
 require('../Includes/rodape.php');
 ?>
+
+
+
