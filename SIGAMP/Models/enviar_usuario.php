@@ -7,10 +7,13 @@ verificaUsuario();
 $nome = $_POST["nome_usuario"];
 $cpf = $_POST["cpf_usuario"];
 $senha = $_POST["senha_usuario"];
+
+$codificado = sha1($senha);
+
 $nivel = $_POST["nv_acesso"];
 
 
-if(insereUsuario($conexao, $nome, $cpf, $senha, $nivel)){
+if(insereUsuario($conexao, $nome, $cpf, $codificado, $nivel)){
     $_SESSION["success"] = "Cadastrado com sucesso";
     header('Location: ../Views/listar_usuario.php');
     die;

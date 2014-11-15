@@ -14,6 +14,12 @@ function listarProdutos($conexao){
 	return $produtos;
 }
 
+function totalproduto($conexao, $id){
+        $query = "select qt_produto from produto where cd_produto = {$id}";
+	$resultado = mysqli_query($conexao, $query);
+        return mysqli_fetch_assoc($resultado);
+}
+
 function buscaProduto($conexao, $id){
 	$query = "select * from produto where cd_produto = {$id}";
 	$resultado = mysqli_query($conexao, $query);
@@ -22,6 +28,11 @@ function buscaProduto($conexao, $id){
 
 function alterarProduto($conexao,$id,$nome,$fabricante,$qtd, $preco, $desc){
         $query = "update produto set nm_produto='{$nome}',nm_fabricante_produto='{$fabricante}',qt_produto={$qtd},vl_produto={$preco},ds_produto='{$desc}' where cd_produto = {$id}";
+	return mysqli_query($conexao, $query);
+}
+
+function diminuiProduto($conexao,$id){
+        $query = "update produto set qt_produto = (qt_produto - 1) where cd_produto = {$id}";
 	return mysqli_query($conexao, $query);
 }
 

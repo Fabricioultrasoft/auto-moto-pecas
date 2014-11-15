@@ -14,10 +14,11 @@ if (!empty($_POST) AND (empty($_POST['login']) OR empty($_POST['senha']))) {
 }
 
 // Validação do usuário/senha digitados
-$usuario = buscaUsuario($conexao, $login, $senha);
+$codificado = sha1($senha);
+$usuario = buscaUsuario($conexao, $login, $codificado);
         
 
-if (nroUsuario($conexao, $login, $senha) != 1) {
+if (nroUsuario($conexao, $login, $codificado) != 1) {
 	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
 	$_SESSION["danger"] = "Login Invalido";
 	header("Location: ../index.php");
