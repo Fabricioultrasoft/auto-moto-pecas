@@ -10,6 +10,7 @@ usuarioEstaLogado();
 <p class="text-success">Você está logado como <u><?=$_SESSION['UsuarioNome']?></u></p>
 
 <ul>
+    <li><a href="listar_os.php">Ordens de Serviço</a></li>
     <li><a href="listar_servico.php">Serviço</a><br></li>
     <li><a href="listar_cliente.php">Cliente</a><br></li>
     <li><a href="listar_veiculo.php">Veículo</a><br></li>
