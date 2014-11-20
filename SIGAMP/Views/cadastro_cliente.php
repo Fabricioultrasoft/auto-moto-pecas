@@ -52,8 +52,8 @@ function ValidarCPF(Objcpf){
     <form action="../Models/enviar_cliente.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" size="60" required></td></tr>
-            <tr><td>CPF do Cliente</td><td><input type="number" onblur="ValidarCPF(form1.cpf_usuario)" OnKeyPress="MascaraCPF(form1.cpf_usuario);" class="form-control" name="cpf_cliente" size="60" required></td></tr>
-            <tr><td>RG do Cliente</td><td><input type="number" class="form-control" name="rg_cliente" min="1" size="20" required></td></tr>
+            <tr><td>CPF do Cliente</td><td><input type="number" min="1111111111" max="99999999999" onblur="ValidarCPF(form1.cpf_usuario)" OnKeyPress="MascaraCPF(form1.cpf_usuario);" class="form-control" name="cpf_cliente" size="60" required></td></tr>
+            <tr><td>RG do Cliente</td><td><input type="number" class="form-control" name="rg_cliente" min="1111111" max="999999999" size="20" required></td></tr>
             <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" min="1920-12-31" max="1996-01-01" name="aniversario_cliente" placeholder="DD/MM/AAAA" size="20" required></td></tr>
             <tr><td>Endereço do Cliente</td><td><input type="text" class="form-control" name="endereco_cliente" size="60" required></td></tr>
             <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_cliente" size="60" required></td></tr>
@@ -89,8 +89,8 @@ function ValidarCPF(Objcpf){
                         
                     </select>    
                 </td></tr>
-            <tr><td>Telefone Fixo</td><td><input type="tel" class="form-control" name="tel_cliente" size="60" required placeholder="(XX)XXXX-XXXX"></td></tr>
-            <tr><td>Telefone Celular</td><td><input type="tel" class="form-control" name="cel_cliente" size="60" placeholder="(XX)XXXX-XXXX"></td></tr>
+            <tr><td>Telefone Fixo</td><td><input type="number" min="0000000000" max="9999999999" class="form-control" name="tel_cliente" size="60" required></td></tr>
+            <tr><td>Telefone Celular</td><td><input type="number" min="00000000000" max="99999999999" class="form-control" name="cel_cliente" size="60"></td></tr>
             <tr><td>E-Mail do Cliente</td><td><input type="email" class="form-control" name="email_cliente" size="60"></td></tr>
         </table>
         <button class="btn btn-success" type="submit">Cadastrar</button>     
