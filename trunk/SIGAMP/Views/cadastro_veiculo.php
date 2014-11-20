@@ -21,7 +21,7 @@ $cpf = $_GET['cpf'];
     <form action="../Models/enviar_veiculo.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome do Cliente</td><td><input type="text" class="form-control" name="nome_cliente" value="<?=$nome?>" size="60" required></td></tr>
-            <tr><td>CPF</td><td><input type="number" class="form-control" name="cpf_cliente" min="1" max="99999999999" value="<?=$cpf?>" size="11" required></td></tr>
+            <tr><td>CPF do Cliente</td><td><input type="number" min="1111111111" max="99999999999" class="form-control" name="cpf_cliente" value="<?=$cpf?>" size="60" required></td></tr>
             <tr><td>Placa</td><td><input type="text" class="form-control" name="placa" required></td></tr>
             <tr><td>Cor</td><td><input type="text" class="form-control" name="cor" size="20" required></td></tr>
             <tr><td>Marca</td><td><input type="text" class="form-control" name="marca" size="20" required></td></tr>
